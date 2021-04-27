@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-md-4">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="text-center">Nuevo Usuario</h2>
+      <br>
+      <form>
+        <div class="form-group">
+          <input type="text" name="nombre_s" [(ngModel)]="user.nombre_s" [ngModelOptions]="{standalone: true}" placeholder="Nombre(s) del alumno" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="apellido_pat" [(ngModel)]="user.apellido_pat"  [ngModelOptions]="{standalone: true}" placeholder="Apellido Paterno" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="apellido_mat" [(ngModel)]="user.apellido_mat" [ngModelOptions]="{standalone: true}"  placeholder="Apellido Materno" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" name="usuario" [(ngModel)]="user.usuario" [ngModelOptions]="{standalone: true}" placeholder="Nombre de usuario" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="password" [(ngModel)]="user.contrasena" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" class="form-control" autofocus>
+        </div>
+        <button  class="btn btn-success btn-block" (click) = " edit ? updateUser() : saveNewUser()" >Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
