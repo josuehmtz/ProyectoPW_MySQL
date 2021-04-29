@@ -9,17 +9,19 @@ import { AdministradorComponent } from './components/administrador/administrador
 
 const routes: Routes = [
   {
-    path: '',
+    path: '' ,
     redirectTo: '/usuarios',
     pathMatch: 'full'
   },
   {
-    path: 'usuarios', component: UserListComponent
+    path: 'usuarios',
+    component: UserListComponent
   },
   {
     path: 'usuarios/add',
     component: UserFormComponent
-  },{
+  },
+  {
     path: 'usuarios/edit/:id',
     component: UserFormComponent
   },

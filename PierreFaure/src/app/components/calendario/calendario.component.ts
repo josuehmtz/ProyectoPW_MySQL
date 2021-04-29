@@ -67,6 +67,5 @@ export class CalendarioComponent implements OnInit {
     const objectDate = moment(parse)
     this.dateValue = objectDate;
 
-
   }
 }
