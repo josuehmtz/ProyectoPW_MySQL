@@ -5,6 +5,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdministradorComponent } from './components/administrador/administrador.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path :'login',
     component:LoginComponent
+  },
+  {
+    path : 'admin',
+    component:AdministradorComponent
   }
 
 ];

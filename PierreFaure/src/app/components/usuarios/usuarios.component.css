@@ -1,5 +1,5 @@
 ul{
-  margin-left: 30%;
+  margin-left: 15%;
   text-align: center;
 }
 
@@ -15,5 +15,14 @@ form{
   margin-left: 8%;
 }
 
+.logo{
+  margin-left: 6%;
+  width: 20%;
+  cursor: pointer;
+}
 
 
+*{
+  background-color: #dcdde1;
+  padding: 0%;
+}

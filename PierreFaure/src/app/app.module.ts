@@ -11,7 +11,9 @@ import { UserListComponent } from './components/user-list/user-list.component';
 
 import { UsersService} from './services/users.service';
 import { PagosComponent } from './components/pagos/pagos.component';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { AdministradorComponent } from './components/administrador/administrador.component';
+import { CalendarioComponent } from './components/calendario/calendario.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { LoginComponent } from './components/login/login.component'
     UserFormComponent,
     UserListComponent,
     PagosComponent,
-    LoginComponent
+    LoginComponent,
+    AdministradorComponent,
+    CalendarioComponent
   ],
   imports: [
     BrowserModule,

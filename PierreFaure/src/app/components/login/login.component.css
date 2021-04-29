@@ -1,18 +1,21 @@
+header{
+  background: #dcdde1 ;
+}
 
 body{
-  background-color: darkgrey;
+  background-color: white;
 }
 .box{
   text-align: center;
   margin-top: 100px;
-  background-color:rgba(7, 18, 117, 0.3);
+  background-color:darkgray;
   border-radius: 5%;
   width: 500px;
   display: inline-block;
   margin-left: 450px;
   font-size: 30px;
   height: 350px;
-
+  color: white;
 }
 
 input{
@@ -21,7 +24,6 @@ input{
   margin-bottom: 1%;
   width: 200px;
   padding-top: 15px;
-
 }
 
 label{
@@ -44,8 +46,21 @@ header{
   margin: 0%;
   }
 
+h1 {
+  padding-top: 2.5%;
+}
 
+footer{
+  box-sizing: border-box;
+  text-align: center;
+  background: #273c75;
+  color: white;
+  padding: 2.1%;
+  margin-top: 6%;
+  }
 
-
+  ::-webkit-scrollbar {
+    display: none;
+    }
 
 
