@@ -10,7 +10,7 @@ import { AdministradorComponent } from './components/administrador/administrador
 const routes: Routes = [
   {
     path: '' ,
-    redirectTo: '/usuarios',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {

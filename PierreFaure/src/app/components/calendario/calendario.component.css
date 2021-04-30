@@ -1,5 +1,5 @@
 *{
-  outline: none !important
+  outline: none !important;
 }
 
 .wrapper-calendar{
@@ -8,6 +8,7 @@
   border: solid 1px #eaeaea;
   box-shadow: 0 0 10px #e4e4e4;
 }
+
 
 div {
     text-align: center;
@@ -67,3 +68,5 @@ div {
     background-color: transparent;
     border: 0;
   }
+
+

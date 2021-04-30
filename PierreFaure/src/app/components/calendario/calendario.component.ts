@@ -64,7 +64,7 @@ export class CalendarioComponent implements OnInit {
   clickDay(day: { value: any; }) {
     const monthYear = this.dateSelect.format('YYYY-MM')
     const parse = `${monthYear}-${day.value}`
-    const objectDate = moment(parse)
+    const objectDate = moment(parse);
     this.dateValue = objectDate;
 
   }
