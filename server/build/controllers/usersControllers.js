@@ -17,7 +17,7 @@ const database_1 = __importDefault(require("../database"));
 class usersController {
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('SELECT * FROM tabla1', function (err, result, fields) {
+            yield database_1.default.query('SELECT * FROM usuarios', function (err, result, fields) {
                 if (err)
                     throw err;
                 res.json(result);
@@ -27,7 +27,7 @@ class usersController {
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            yield database_1.default.query('SELECT * FROM tabla1 where id_user = ?', [id], function (err, result, fields) {
+            yield database_1.default.query('SELECT * FROM usuarios where id_user = ?', [id], function (err, result, fields) {
                 if (err)
                     throw err;
                 if (result.length > 0) {
@@ -39,7 +39,7 @@ class usersController {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('INSERT INTO tabla1 set ?', [req.body]);
+            yield database_1.default.query('INSERT INTO usuarios set ?', [req.body]);
             console.log(req.body);
             res.json({ message: 'Usuario creado' });
         });
@@ -47,14 +47,14 @@ class usersController {
     delete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            yield database_1.default.query('DELETE FROM tabla1 WHERE id_user = ?', [id]);
+            yield database_1.default.query('DELETE FROM usuarios WHERE id_user = ?', [id]);
             res.json({ text: 'Usuario eliminado con exito' });
         });
     }
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            yield database_1.default.query('UPDATE tabla1 set ? WHERE id_user = ?', [req.body, id]);
+            yield database_1.default.query('UPDATE usuarios set ? WHERE id_user = ?', [req.body, id]);
             res.json({ message: 'Datos actualizados' });
         });
     }

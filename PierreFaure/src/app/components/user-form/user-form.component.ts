@@ -15,11 +15,12 @@ export class UserFormComponent implements OnInit {
 
   user: User = {
     id_user: 0,
-    usuario: '',
-    contrasena: '',
+    email: '',
+    password: '',
     nombre_s: '',
-    apellido_pat: '',
-    apellido_mat: ''
+    ape_pat: '',
+    ape_mat: '',
+    login_status: false
   };
 
   constructor(private usersService: UsersService, private router: Router, private activatedRoute : ActivatedRoute) { }
@@ -28,8 +29,8 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit(): void {
     const params =  this.activatedRoute.snapshot.params;
-    if (params.id_user) {
-      this.usersService.getUser(params.id_user) .subscribe(
+    if (params.id) {
+      this.usersService.getUser(params.id) .subscribe(
         res => {
           console.log(res);
           //this.user = res;

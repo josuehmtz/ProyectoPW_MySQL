@@ -1,14 +1,17 @@
-CREATE DATABASE test; 
+CREATE DATABASE proyecto; 
 
-USE test;
+USE proyecto;
 
-CREATE TABLE tabla1 (
-    id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-    usuario VARCHAR (15) NOT NULL, 
-    contraseña VARCHAR (20) NOT NULL, 
-    nombre_s VARCHAR (50) NOT NULL, 
-    apellido_pat VARCHAR (30) NOT NULL,
-    apellido_mat VARCHAR (30) NOT NULL   
-); 
+CREATE TABLE eventos (id_evento INT NOT NULL PRIMARY KEY,
+ nombre_evento VARCHAR (50),
+ fecha DATE,
+ descripcion VARCHAR (50),
+ hora VARCHAR (10),
+ id_grupo INT NOT NULL, 
+ FOREIGN KEY (id_grupo) REFERENCES grupos(id_grupo));
 
-DESCRIBE tabla1 ;
+DESCRIBE usuarios;
+DESCRIBE grupos;
+DESCRIBE eventos;
+DESCRIBE admin;
+DESCRIBE alumnos; 

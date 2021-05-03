@@ -1,7 +1,7 @@
 import { User } from './../models/users';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { } from '../models/users'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class UsersService {
     return this.http.post(`${this.API_URI}/usuarios`, users);
   }
 
-  updateUser(id :string | number, updatedUser: User){
+  updateUser(id :string | number, updatedUser: User) /*: Observable<User>*/{
     return this.http.put(`${this.API_URI}/usuarios/${id}`, updatedUser);
   }
 }
