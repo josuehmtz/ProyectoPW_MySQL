@@ -54,7 +54,7 @@ class usersController {
     update(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
-            yield database_1.default.query('UPDATE usuarios set ? WHERE id_user = ?', [req.body, id]);
+            yield database_1.default.query('UPDATE ususarios set ? WHERE id_user = ?', [req.body, id]);
             res.json({ message: 'Datos actualizados' });
         });
     }
