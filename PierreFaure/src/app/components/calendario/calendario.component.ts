@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
+
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.component.html',
@@ -26,7 +27,7 @@ export class CalendarioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.getDaysFromDate(8, 2020)
+    this.getDaysFromDate(5, 2021)
   }
 
   getDaysFromDate(month: number, year: number) {
@@ -65,7 +66,9 @@ export class CalendarioComponent implements OnInit {
     const monthYear = this.dateSelect.format('YYYY-MM')
     const parse = `${monthYear}-${day.value}`
     const objectDate = moment(parse);
+    console.log(objectDate)
     this.dateValue = objectDate;
-
   }
+
+
 }

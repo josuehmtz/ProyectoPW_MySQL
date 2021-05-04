@@ -14,13 +14,28 @@
 
           <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
            *ngFor="let day of monthSelect;let first = first">
-        <span>{{day?.value}}</span>
+        <span>{{day.value}}</span>
       </li>
     </ol>
   </div>
+  <div class="generator">
+    <a href="#ventana1" class="btn btn-primary btn-lg" data-toggle="modal">Crear Evento</a>
+    <div class="modal fade" id="ventana1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-tittle">Nuevo Evento</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">
 
-  <div>
-    Fecha: {{dateValue | date}}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" >Cancelar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>
