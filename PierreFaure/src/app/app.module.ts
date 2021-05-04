@@ -13,7 +13,8 @@ import { UsersService} from './services/users.service';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
-import { CalendarioComponent } from './components/calendario/calendario.component'
+import { CalendarioComponent } from './components/calendario/calendario.component';
+import { PagosFormComponent } from './components/pagos-form/pagos-form.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { CalendarioComponent } from './components/calendario/calendario.componen
     PagosComponent,
     LoginComponent,
     AdministradorComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    PagosFormComponent
   ],
   imports: [
     BrowserModule,

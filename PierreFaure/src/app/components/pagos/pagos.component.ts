@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+@Injectable()
 @Component({
   selector: 'app-pagos',
   templateUrl: './pagos.component.html',
@@ -8,12 +9,10 @@ import { Router } from '@angular/router';
 })
 export class PagosComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  cancelar() {
-    this.router.navigate(['admin']);
-  }
+
 
 }
