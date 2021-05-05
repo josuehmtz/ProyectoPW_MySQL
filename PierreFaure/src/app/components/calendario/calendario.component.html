@@ -29,7 +29,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-tittle">Nuevo Evento</h4>
+            <h2 class="modal-tittle">Nuevo Evento</h2>
             <button
               type="button"
               class="close"
@@ -40,7 +40,9 @@
             </button>
           </div>
           <div class="modal-body">
-            <h3 for="">FECHA: {{dateValue | date}}</h3>
+            <h4 for="">FECHA: {{dateValue | date}}</h4>
+            <label for="Hora">Hora:</label>
+            <input atp-time-picker value="10:00" class="hora">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">

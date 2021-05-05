@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { AmazingTimePickerService } from 'amazing-time-picker';
+
 
 
 @Component({
@@ -24,7 +26,7 @@ export class CalendarioComponent implements OnInit {
   dateSelect: any;
   dateValue: any;
 
-  constructor() { }
+  constructor(private atp: AmazingTimePickerService) { }
 
   ngOnInit(): void {
     this.getDaysFromDate(5, 2021)
@@ -70,5 +72,11 @@ export class CalendarioComponent implements OnInit {
     this.dateValue = objectDate;
   }
 
+  open(){
+    const amazingTimePicker = this.atp.open();
+    amazingTimePicker.afterClose().subscribe(time => {
+      console.log(time);
+    });
+  }
 
 }

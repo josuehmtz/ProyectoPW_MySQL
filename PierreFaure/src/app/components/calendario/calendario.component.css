@@ -9,10 +9,6 @@
   box-shadow: 0 0 10px #e4e4e4;
 }
 
-.generator{
-
-}
-
 .contenedor {
     text-align: center;
     width: 300px;
@@ -33,9 +29,11 @@
     font-size: 1.5ch;
     cursor: pointer;
   }
+
   li:hover{
     font-weight: 600;
   }
+  
   h2 {
     margin-bottom: 4px;
     padding: 0;

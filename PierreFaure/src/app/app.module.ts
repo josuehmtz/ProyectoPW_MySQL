@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { PagosFormComponent } from './components/pagos-form/pagos-form.component'
+import { AmazingTimePickerModule } from 'amazing-time-picker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { PagosFormComponent } from './components/pagos-form/pagos-form.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AmazingTimePickerModule
   ],
   providers: [
     UsersService
