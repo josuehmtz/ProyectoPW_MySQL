@@ -41,6 +41,12 @@
           </div>
           <div class="modal-body">
             <h4 for="">FECHA: {{dateValue | date}}</h4>
+            <label for="nombre-evento" class="col-form-label">Nombre del evento:</label>
+            <input type="text" class="form-control" id="nombre-evento">
+            <br>
+            <label for="desc-evento" class="col-form-label">Descripcion del evento:</label>
+            <textarea class="form-control" id="desc-evento"></textarea>
+            <br>
             <label for="Hora">Hora:</label>
             <input atp-time-picker value="10:00" class="hora">
           </div>
