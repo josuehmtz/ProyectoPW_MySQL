@@ -20,12 +20,12 @@ export class UserFormComponent implements OnInit {
     nombre_s: '',
     ape_pat: '',
     ape_mat: '',
-    login_status: false
+    login_status: false,
   };
 
-  constructor(private usersService: UsersService, private router: Router, private activatedRoute : ActivatedRoute) { }
+  constructor(private usersService: UsersService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  edit: boolean = false;
+  edit = false;
 
   ngOnInit(): void {
     const params =  this.activatedRoute.snapshot.params;
@@ -33,14 +33,15 @@ export class UserFormComponent implements OnInit {
       this.usersService.getUser(params.id) .subscribe(
         res => {
           console.log(res);
-          //this.user = res;
+          this.user = res;
           this.edit = true;
         },
         err => console.log(err)
-      )
+      );
     }
   }
 
+  // tslint:disable-next-line: typedef
   saveNewUser(){
 
     this.usersService.saveUser(this.user)
@@ -50,18 +51,20 @@ export class UserFormComponent implements OnInit {
         this.router.navigate(['/usuarios']);
       },
       err => console.log(err)
-    )
+    );
     }
 
+    // tslint:disable-next-line: typedef
     updateUser(){
-      this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
+     /*this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
         res => {
           console.log(res);
           this.router.navigate(['/usuarios']);
         },
         err => console.log(err)
-      )
+      );*/
     }
 
   }
+
 

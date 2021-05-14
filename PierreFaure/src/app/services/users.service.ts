@@ -10,25 +10,29 @@ export class UsersService {
 
   API_URI = 'http://localhost:3000';
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line: typedef
   getUsers(){
     return this.http.get(`${this.API_URI}/usuarios`);
   }
 
-  getUser(id :string){
+  // tslint:disable-next-line: typedef
+  getUser(id: string){
     return this.http.get(`${this.API_URI}/usuarios/${id}`);
   }
 
-  deleteUser(id :string){
+  // tslint:disable-next-line: typedef
+  deleteUser(id: string){
     return this.http.delete(`${this.API_URI}/usuarios/${id}`);
   }
 
+  // tslint:disable-next-line: typedef
   saveUser(users: User){
     return this.http.post(`${this.API_URI}/usuarios`, users);
   }
 
-  updateUser(id :string | number, updatedUser: User) /*: Observable<User>*/{
+  updateUser(id: string|number, updatedUser: User): Observable<User>{
     return this.http.put(`${this.API_URI}/usuarios/${id}`, updatedUser);
   }
 }
