@@ -40,21 +40,33 @@
             </button>
           </div>
           <div class="modal-body">
-            <h4 for="">FECHA: {{dateValue | date}}</h4>
+            <h4 for="Fecha">FECHA: {{dateValue | date}}</h4>
             <label for="nombre-evento" class="col-form-label">Nombre del evento:</label>
-            <input type="text" class="form-control" id="nombre-evento">
+            <input type="text" class="form-control" [(ngModel)]="evento.nombre_evento" [ngModelOptions]="{standalone: true}" id="nombre-evento">
             <br>
             <label for="desc-evento" class="col-form-label">Descripcion del evento:</label>
             <textarea class="form-control" id="desc-evento"></textarea>
             <br>
             <label for="Hora">Hora:</label>
+            <br>
             <input atp-time-picker value="10:00" class="hora">
+            <br> <br>
+            <label for="Grupo">Grupo:</label>
+            <br>
+            <select name="Grupos" id="Grupos" [(ngModel)]="evento.id_grupo" [ngModelOptions]="{standalone: true}">
+              <option value="0">Guardería</option>
+              <option value="0">1 Kínder</option>
+              <option value="1">2 Kínder</option>
+              <option value="2">3 Kínder</option>
+              <option value="3">Club de tareas</option>
+            </select>
+            <br>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">
               Cancelar
             </button>
-            <button type="button" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-primary" (click) = "edit ? updateEvent : saveNewEvent">Guardar</button>
           </div>
         </div>
       </div>

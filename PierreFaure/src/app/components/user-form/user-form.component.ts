@@ -43,7 +43,6 @@ export class UserFormComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   saveNewUser(){
-
     this.usersService.saveUser(this.user)
     .subscribe(
       res => {
@@ -56,7 +55,7 @@ export class UserFormComponent implements OnInit {
 
     // tslint:disable-next-line: typedef
     updateUser(){
-     /*this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
+    /* this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
         res => {
           console.log(res);
           this.router.navigate(['/usuarios']);
