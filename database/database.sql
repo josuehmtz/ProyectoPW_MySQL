@@ -10,6 +10,7 @@ CREATE TABLE eventos (id_evento INT NOT NULL PRIMARY KEY,
  id_grupo INT NOT NULL, 
  FOREIGN KEY (id_grupo) REFERENCES grupos(id_grupo));
 
+
 DESCRIBE usuarios;
 DESCRIBE grupos;
 DESCRIBE eventos;
