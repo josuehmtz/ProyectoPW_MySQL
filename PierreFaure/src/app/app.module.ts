@@ -17,6 +17,11 @@ import { AdministradorComponent } from './components/administrador/administrador
 import { CalendarioComponent } from './components/calendario/calendario.component';
 import { PagosFormComponent } from './components/pagos-form/pagos-form.component'
 import { AmazingTimePickerModule } from 'amazing-time-picker';
+import { NavegacionComponent } from './components/pagina/navegacion/navegacion.component';
+import { PrincipalComponent } from './components/pagina/principal/principal.component';
+import { ServiciosComponent } from './components/pagina/servicios/servicios.component';
+import { ContactoComponent } from './components/pagina/contacto/contacto.component';
+import { NosotrosComponent } from './components/pagina/nosotros/nosotros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,12 @@ import { AmazingTimePickerModule } from 'amazing-time-picker';
     LoginComponent,
     AdministradorComponent,
     CalendarioComponent,
-    PagosFormComponent
+    PagosFormComponent,
+    NavegacionComponent,
+    PrincipalComponent,
+    ServiciosComponent,
+    ContactoComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
