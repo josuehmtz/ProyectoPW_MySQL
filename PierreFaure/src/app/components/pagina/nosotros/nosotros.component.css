@@ -1,0 +1,61 @@
+*{
+  text-align: center;
+}
+
+h1, h2, h4{
+  color: #273c75;
+}
+
+.container{
+  display: block;
+  text-align: center;
+}
+
+.cabeceras{
+  display: inline-block;
+}
+
+.uno{
+  margin-right: 40%;
+  margin-left: 5%;
+}
+
+.mision, .vision{
+  border: 3px solid #ff6b6b;
+  display: inline-block;
+  border-radius: 20%;
+  padding: 2%;
+}
+
+.mision{
+  margin: 3%;
+  margin-right: 5%;
+}
+
+ul{
+  margin-top: 5%;
+  list-style: none;
+  display: flex;
+}
+
+.valores-2{
+  width: 60%;
+}
+
+footer {
+  box-sizing: border-box;
+  text-align: center;
+  background: #273c75;
+  color: white;
+  padding: 2.1%;
+  margin-top: 6%;
+}
+
+.desc{
+  color: #273c75;
+  margin-left: 5%;
+}
+
+.first{
+  margin-left: 11%;
+}
