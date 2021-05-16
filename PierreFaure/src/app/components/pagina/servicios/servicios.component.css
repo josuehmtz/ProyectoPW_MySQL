@@ -1,0 +1,43 @@
+
+.preescolar{
+  background: #ccc;
+  width: 300px;
+  margin: auto;
+}
+
+.guarderia {
+  background: #ccc;
+  width: 300px;
+  margin: auto;
+}
+
+.clubtareas{
+  background: #ccc;
+  width: 300px;
+  margin: auto;
+}
+
+.actextr{
+  background: #ccc;
+  width: 300px;
+  margin: auto;
+}
+
+
+ul{
+  display: flex;
+}
+
+h6{
+  text-align: center;
+}
+
+
+footer{
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid black;
+  background: #273c75;
+  color: white;
+  padding: 2%;
+  }

@@ -6,6 +6,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
+import { ContactoComponent } from './components/pagina/contacto/contacto.component';
+import { ServiciosComponent } from './components/pagina/servicios/servicios.component';
 
 
 
@@ -54,6 +56,15 @@ const routes: Routes = [
   {
     path : 'admin',
     component:AdministradorComponent
+  },
+
+  {
+    path: 'contacto',
+    component: ContactoComponent
+  },
+  {
+    path: 'servicios',
+    component: ServiciosComponent
   }
 
 ];
