@@ -6,10 +6,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
-import { PrincipalComponent } from './components/pagina/principal/principal.component';
-import { NosotrosComponent } from './components/pagina/nosotros/nosotros.component';
-import { ServiciosComponent} from './components/pagina/servicios/servicios.component';
-import { ContactoComponent} from './components/pagina/contacto/contacto.component';
+
 
 
 const routes: Routes = [
