@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { ContactoComponent } from './components/pagina/contacto/contacto.component';
 import { ServiciosComponent } from './components/pagina/servicios/servicios.component';
+import { PrincipalComponent} from './components/pagina/principal/principal.component';
+import { NosotrosComponent} from './components/pagina/nosotros/nosotros.component';
 
 
 
