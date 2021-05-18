@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,30 +10,46 @@
   <app-navegacion></app-navegacion>
 </header>
 <body>
-  <div class="box">
-    <form class="item">
-      <h1>Inicio Sesion</h1>
-      <div>
-        <label for="Email" > Correo: </label>
-        <!--<input type="text" name="email" placeholder="Email" ngModel required size="20" autofocus>-
-        <input type="email" id="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" required autofocus>
+  <ul class= "contenido">
+    <li>
+      <div class="box-image">
+        <img  class="imagen" src="../../../assets/images/clases.jpg" alt="Clases">
       </div>
-      <div>
-        <label for="password">Contraseña: </label>
-        <!--<input type="text" name="password" placeholder="Password" ngModel required size="20">
-        <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" required>
+    </li>
+    <li>
+      <div class="box">
+        <form class="item">
+          <h1>Inicio Sesion</h1>
+          <br>
+            <ul>
+              <li>
+                <label for="password">E-Mail:</label>
+              </li>
+              <li>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" required autofocus>
+              </li>
+              <li>
+                <label for="password">Contraseña: </label>
+              </li>
+              <li>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" required>
+              </li>
+            </ul>
+            <br>
+        </form>
+        <button type="submit" style="cursor: pointer;" onclick="onLogin()">Iniciar Sesión</button>
       </div>
-    </form>
-    <button type="submit" style="cursor: pointer;" onclick="onLogin()">Iniciar Sesión</button>
-  </div>
+    </li>
+  </ul>
+  <br>
   <footer>
     <p>Derechos Reservados &copy; Colegio Pierre Faure 2021.</p>
   </footer>
 </body>
 </html>
--->
 
-<section id="login" class="mb-5 mt-5">
+
+<!--<section id="login" class="mb-5 mt-5">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
@@ -58,6 +74,6 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
 

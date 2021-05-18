@@ -1,8 +1,11 @@
 import { Component, ElementRef, Injectable, OnInit, ViewChild } from '@angular/core';
-import { async } from '@angular/core/testing';
+import { waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
 
-//declare var paypal;
+// tslint:disable-next-line: max-line-length
+declare var paypal: { buttons: (arg0: { createOrder: (data: any, actions: any) => any;
+   onApprove: (data: any, actions: any) => Promise<void>; onError: (err: any) => void; }) =>
+    { (): any; new(): any; render: { (arg0: any): void; new(): any; }; }; };
 @Injectable()
 @Component({
   selector: 'app-pagos-form',
@@ -11,55 +14,17 @@ import { Router } from '@angular/router';
 })
 export class PagosFormComponent implements OnInit {
 
-  //@ViewChild('paypal', {static:true}) paypalElement:ElementRef;
+  constructor(private router: Router) { }
+
+  @ViewChild('paypal', { static: true })
+  paypalElement!: ElementRef;
 
   pagos = {
     descripcion: 'Pago Pierre Faure',
     precio: '1500',
+  };
 
-  }
-
-  constructor(private router:Router) { }
-
-  ngOnInit(){}
-
-  /*ngOnInit(): void {
-    paypal.buttons({
-      createOrder:(data,actions) =>{
-        return actions.order.create({
-          purchase_units:[{
-            description: this.pagos.descripcion,
-            amount:{
-              currency_code: 'MXM',
-              value: this.pagos.precio
-            }
-          }]
-        })
-      },
-      onApprove: async(data,actions)=>{
-        const order = await actions.order.capture();
-        console.log(order)
-      },
-      onError: err =>{
-        console.log(err);
-      }
-    }).render(this.paypalElement.nativeElement);
-  }
-  */
-
-  cancelar() {
-    this.router.navigate(['admin']);
-  }
-
-
-
-
-
-
-
-
-  
-  /*paymentRequest : google.payments.api.PaymentDataRequest = {
+  paymentRequest: google.payments.api.PaymentDataRequest = {
     apiVersion: 2,
     apiVersionMinor: 0,
     allowedPaymentMethods: [
@@ -93,8 +58,39 @@ export class PagosFormComponent implements OnInit {
   callbackIntents:  ['PAYMENT_AUTHORIZATION']
 };
 
+
+
+  ngOnInit(): void {
+    paypal.buttons({
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            description: this.pagos.descripcion,
+            amount: {
+              currency_code: 'MXM',
+              value: this.pagos.precio
+            }
+          }]
+        });
+      },
+      onApprove: async (data, actions) => {
+        const order = await actions.order.capture();
+        console.log(order);
+      },
+      onError: err => {
+        console.log(err);
+      }
+    }).render(this.paypalElement.nativeElement);
+  }
+
+
+  // tslint:disable-next-line: typedef
+  cancelar() {
+    this.router.navigate(['admin']);
+  }
+
 onLoadPaymentData = (
-  event : Event): void => {
+  event: Event): void => {
     const eventDetail = event as CustomEvent<google.payments.api.PaymentData>;
     console.log('load payment data', eventDetail.detail);
   }
@@ -109,5 +105,5 @@ onPaymentDataAuthorized: google.payments.api.PaymentAuthorizedHandler = (payment
 onError = (event: ErrorEvent): void => {
   console.error('error', event.error);
 }
-*/
+
 }

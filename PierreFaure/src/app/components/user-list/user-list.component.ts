@@ -18,6 +18,7 @@ export class UserListComponent implements OnInit {
     this.getUsers();
   }
 
+  // tslint:disable-next-line: typedef
   getUsers(){
     this.usersService.getUsers().subscribe(
       res => {
@@ -27,16 +28,18 @@ export class UserListComponent implements OnInit {
     );
   }
 
-  deleteUser(id : string){
+  // tslint:disable-next-line: typedef
+  deleteUser(id: string){
     this.usersService.deleteUser(id).subscribe(
       res => {
-        console.log(res)
+        console.log(res);
         this.getUsers();
       },
       err => console.error(err)
     );
   }
 
+  // tslint:disable-next-line: typedef
   editUser(id: string){
     console.log(id);
   }

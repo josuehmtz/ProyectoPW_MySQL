@@ -10,11 +10,11 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router:Router) { }
-    user:User={
-    email:'',
-    password:''
-  }
+  constructor(private authService: AuthService, private router: Router) { }
+    user: User = {
+    email: '',
+    password: ''
+  };
 
 
 
@@ -22,13 +22,15 @@ export class LoginComponent implements OnInit {
   }
 
 
+  // tslint:disable-next-line: typedef
   onLogin(){
+    // tslint:disable-next-line: no-non-null-assertion
     return this.authService.loginuser(this.user.email!, this.user.password!)
     .subscribe(data => {
-    this.authService.setUser(data.user)
-    let token = data.id;
+    this.authService.setUser(data.user);
+    const token = data.id;
     this.authService.setToken(token);
-    this.router.navigate(['/admin'])
+    this.router.navigate(['/admin']);
     },
     error => console.log(error)
     );

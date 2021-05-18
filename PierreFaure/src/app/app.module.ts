@@ -15,7 +15,7 @@ import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { CalendarioComponent } from './components/calendario/calendario.component';
-import { PagosFormComponent } from './components/pagos-form/pagos-form.component'
+import { PagosFormComponent } from './components/pagos-form/pagos-form.component';
 import { AmazingTimePickerModule } from 'amazing-time-picker';
 import { NavegacionComponent } from './components/pagina/navegacion/navegacion.component';
 import { PrincipalComponent } from './components/pagina/principal/principal.component';
