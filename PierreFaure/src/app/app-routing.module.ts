@@ -60,14 +60,6 @@ const routes: Routes = [
     component:AdministradorComponent
   },
 
-  {
-    path: 'contacto',
-    component: ContactoComponent
-  },
-  {
-    path: 'servicios',
-    component: ServiciosComponent
-  }
 
 ];
 

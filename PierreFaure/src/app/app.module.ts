@@ -22,6 +22,8 @@ import { PrincipalComponent } from './components/pagina/principal/principal.comp
 import { ServiciosComponent } from './components/pagina/servicios/servicios.component';
 import { ContactoComponent } from './components/pagina/contacto/contacto.component';
 import { NosotrosComponent } from './components/pagina/nosotros/nosotros.component';
+import { GooglePayButtonModule } from '@google-pay/button-angular';
+import { DataApiService } from './services/data-api.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,17 +39,19 @@ import { NosotrosComponent } from './components/pagina/nosotros/nosotros.compone
     PrincipalComponent,
     ServiciosComponent,
     ContactoComponent,
-    NosotrosComponent
+    NosotrosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AmazingTimePickerModule
+    AmazingTimePickerModule,
+    GooglePayButtonModule,
   ],
   providers: [
-    UsersService
+    UsersService,
+    DataApiService
   ],
   bootstrap: [AppComponent]
 })
