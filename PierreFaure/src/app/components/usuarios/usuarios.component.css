@@ -21,6 +21,9 @@ form{
   cursor: pointer;
 }
 
+.navbar{
+  margin-bottom: 1em;
+}
 
 *{
   background-color: #dcdde1;

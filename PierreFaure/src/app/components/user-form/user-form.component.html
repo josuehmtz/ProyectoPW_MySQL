@@ -27,7 +27,10 @@
           <label for="password">Contraseña:</label>
           <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" class="form-control" autofocus>
         </div>
-        <button  class="btn btn-success btn-block" (click) = " edit ? updateUser() : saveNewUser()" >Guardar</button>
+        <div class="botones">
+          <button  class="btn btn-success btn-block" (click) = " edit ? updateUser() : saveNewUser()" >Guardar</button>
+          <button  class="btn btn-danger btn-block" (click) = "back()" >Cancelar</button>
+        </div>
       </form>
     </div>
   </div>

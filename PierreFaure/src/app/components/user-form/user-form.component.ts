@@ -55,13 +55,18 @@ export class UserFormComponent implements OnInit {
 
     // tslint:disable-next-line: typedef
     updateUser(){
-    /* this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
+     // tslint:disable-next-line: no-non-null-assertion
+     this.usersService.updateUser(this.user.id_user!, this.user) .subscribe(
         res => {
           console.log(res);
           this.router.navigate(['/usuarios']);
         },
         err => console.log(err)
-      );*/
+      );
+    }
+
+    back(){
+      this.router.navigate(['/usuarios']);
     }
 
   }
