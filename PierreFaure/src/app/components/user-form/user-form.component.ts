@@ -1,8 +1,10 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { User } from '../../models/users';
+import { Tipo_usuario } from '../../models/tipos_usuarios';
 import {ActivatedRoute, Router } from '@angular/router';
 
 import { UsersService} from '../../services/users.service';
+import { Tipo_UsuarioService } from '../../services/tipos_usuarios.service';
 
 @Component({
   selector: 'app-user-form',
@@ -20,10 +22,13 @@ export class UserFormComponent implements OnInit {
     nombre_s: '',
     ape_pat: '',
     ape_mat: '',
-    login_status: false,
+    id_tipo_usuario: '',
   };
 
-  constructor(private usersService: UsersService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  tipos: any = [];
+
+  // tslint:disable-next-line: max-line-length
+  constructor(private usersService: UsersService, private tipoService: Tipo_UsuarioService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   edit = false;
 
@@ -39,6 +44,19 @@ export class UserFormComponent implements OnInit {
         err => console.log(err)
       );
     }
+    this.getTipos();
+  }
+
+
+  // tslint:disable-next-line: typedef
+  getTipos(){
+    this.tipoService.getTipos().subscribe(
+      res => {
+        this.tipos =  res;
+        console.log(res);
+      },
+      err => console.error(err)
+    );
   }
 
   // tslint:disable-next-line: typedef
@@ -65,6 +83,7 @@ export class UserFormComponent implements OnInit {
       );
     }
 
+    // tslint:disable-next-line: typedef
     back(){
       this.router.navigate(['/usuarios']);
     }

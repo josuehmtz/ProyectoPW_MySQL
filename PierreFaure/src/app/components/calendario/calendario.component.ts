@@ -2,10 +2,10 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { AmazingTimePickerService } from 'amazing-time-picker';
 
-import {Calendario} from '../../models/calendario';
+
 import {ActivatedRoute, Router} from '@angular/router';
 
-import {CalendarioService} from '../../services/calendario.service'
+
 
 @Component({
   selector: 'app-calendario',
@@ -15,7 +15,7 @@ import {CalendarioService} from '../../services/calendario.service'
 export class CalendarioComponent implements OnInit {
 
   // tslint:disable-next-line: max-line-length
-  constructor(private atp: AmazingTimePickerService, private calendarioService: CalendarioService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private atp: AmazingTimePickerService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   week: any = [
     'Lunes',
@@ -34,31 +34,13 @@ export class CalendarioComponent implements OnInit {
 
   @HostBinding('class') classes = 'row';
 
-  evento: Calendario = {
-    id_evento: 0,
-    nombre_evento: '',
-    fecha: new Date(),
-    descripcion: '',
-    hora: '',
-    id_grupo: 0,
-  };
+
 
   edit = false;
 
 
   ngOnInit(): void {
     this.getDaysFromDate(5, 2021);
-    const params =  this.activatedRoute.snapshot.params;
-    if (params.id) {
-      this.calendarioService.getCalendario(params.id) .subscribe(
-        res => {
-          console.log(res);
-          this.evento = res;
-          this.edit = true;
-        },
-        err => console.log(err)
-      );
-    }
   }
 
   // tslint:disable-next-line: typedef
@@ -112,29 +94,4 @@ export class CalendarioComponent implements OnInit {
       console.log(time);
     });
   }
-
-  // tslint:disable-next-line: typedef
-  saveNewEvent(){
-    this.calendarioService.saveCalendario(this.evento)
-    .subscribe(
-      res => {
-        console.log(res);
-        this.router.navigate(['/admin']);
-      },
-      err => console.log(err)
-    );
-  }
-
-  // tslint:disable-next-line: typedef
-  updateEvent(){
-    /*this.usersService.updateUser(this.user.id_user, this.user) .subscribe(
-       res => {
-         console.log(res);
-         this.router.navigate(['/usuarios']);
-       },
-       err => console.log(err)
-     );*/
-   }
-
-
 }

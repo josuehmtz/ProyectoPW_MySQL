@@ -23,6 +23,7 @@
     "amazing-time-picker": "^1.8.0",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
+    "mercadopago": "^1.5.7",
     "moment": "^2.29.1",
     "ngx-moment": "^5.0.0",
     "popper.js": "^1.16.1",

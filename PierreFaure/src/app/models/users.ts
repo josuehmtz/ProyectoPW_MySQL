@@ -5,5 +5,5 @@ export interface User{
     nombre_s?: string;
     ape_pat?: string;
     ape_mat?: string;
-    login_status?: boolean;
+    id_tipo_usuario?: number | string;
 }

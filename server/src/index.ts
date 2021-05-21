@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import indexRoutes from './routes/indexRoutes';
 import usersRoutes from './routes/usersRoutes';
+import tipo_usuariosRoutes from './routes/tipo_usuariosRoutes';
 class Server{
 
     public app: Application; 
@@ -19,12 +20,12 @@ class Server{
         this.app.use(cors());
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended: false}));
-        
     }
 
     routes(): void {
         this.app.use('/',indexRoutes);
         this.app.use('/usuarios',usersRoutes);
+        this.app.use('/add', tipo_usuariosRoutes);
     }
 
     start(): void {

@@ -22,3 +22,4 @@ class usersRoutes{
 
 const UsersRoutes = new usersRoutes();
 export default UsersRoutes.router;
+

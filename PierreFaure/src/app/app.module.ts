@@ -11,6 +11,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 
 import { UsersService} from './services/users.service';
+import { Tipo_UsuarioService } from './services/tipos_usuarios.service';
 import { PagosComponent } from './components/pagos/pagos.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
@@ -51,7 +52,8 @@ import { DataApiService } from './services/data-api.service';
   ],
   providers: [
     UsersService,
-    DataApiService
+    DataApiService,
+    Tipo_UsuarioService
   ],
   bootstrap: [AppComponent]
 })
