@@ -15,6 +15,9 @@ class usersRoutes{
         this.router.post('/', UsersController.create);
         this.router.delete('/:id',UsersController.delete);
         this.router.put('/:id', UsersController.update);
+        this.router.post('/signin', UsersController.signin);
+        this.router.post('/validar', UsersController.validar);
+        this.router.post('/verify', UsersController.verifyToken);
         
     }
 

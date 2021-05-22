@@ -75,3 +75,8 @@ footer {
 .ubicacion{
   cursor: pointer;
 }
+
+abbr{
+  color: #273c75;
+  font-size: 30px;
+}
