@@ -10,6 +10,7 @@ import { ContactoComponent } from './components/pagina/contacto/contacto.compone
 import { ServiciosComponent } from './components/pagina/servicios/servicios.component';
 import { PrincipalComponent} from './components/pagina/principal/principal.component';
 import { NosotrosComponent} from './components/pagina/nosotros/nosotros.component';
+import { PadreFamiliaComponent } from './components/padre-familia/padre-familia.component';
 
 
 
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path : 'admin',
     component:AdministradorComponent
+  },
+  {
+    path : 'profile',
+    component:PadreFamiliaComponent
   },
 
 

@@ -5,6 +5,10 @@ h1, h2, h3, form, .ubi-1{
   color: #273c75;
 }
 
+.msg{
+
+  float: left;
+}
 
 
 .box {
@@ -26,6 +30,11 @@ h1, h2, h3, form, .ubi-1{
 
 label{
   margin-right: 5%;
+}
+
+
+.info{
+  color: #ff6b6b;
 }
 
 .enviar{

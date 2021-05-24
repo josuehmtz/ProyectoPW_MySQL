@@ -25,6 +25,8 @@ import { ContactoComponent } from './components/pagina/contacto/contacto.compone
 import { NosotrosComponent } from './components/pagina/nosotros/nosotros.component';
 import { GooglePayButtonModule } from '@google-pay/button-angular';
 import { DataApiService } from './services/data-api.service';
+import { PadreFamiliaComponent } from './components/padre-familia/padre-familia.component';
+import { NavProfileComponent } from './components/nav-profile/nav-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,8 @@ import { DataApiService } from './services/data-api.service';
     ServiciosComponent,
     ContactoComponent,
     NosotrosComponent,
+    PadreFamiliaComponent,
+    NavProfileComponent,
   ],
   imports: [
     BrowserModule,
